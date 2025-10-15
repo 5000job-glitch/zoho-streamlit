@@ -1,3 +1,8 @@
 streamline url
 
 https://5000job-glitch-zoho-streamlit-app-81thf9.streamlit.app/
+
+git add .
+git commit -m "Describe what you changed"
+git commit -m "Updated sidebar styling and requirements.txt"
+git push origin master
