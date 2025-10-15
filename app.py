@@ -59,7 +59,21 @@ if section == "Source Code":
 
 elif section == "ETL Pipeline":
     st.header("⚙️ ETL Pipeline (WhereScape / ADF)")
-    st.write("Visual flow of **Zoho candidate data** through staging, transformation, and reporting layers.")
+    st.write("""
+This is the **WhereScape and ADF ETL pipeline** for Zoho candidate data.  
+It shows how raw API data is transformed and prepared for reporting.
+
+**Workflow:**
+- `[V_api_zohoadmin_candidates]` → Source view from the Zoho API.  
+- `[stage_api_zohoadmin_candidates]` → Staging layer for initial cleansing and validation.  
+- `[dl_api_zohoadmin_candidates]` → Data layer for structured storage and integration.  
+- Final views:  
+  - `[V_dl_api_zohoadmin_candidates_current]` → Current snapshot of processed candidates.  
+  - `[V_dlbv_api_zohoadmin_candidates_current]` → Reporting-ready view for analytics.
+
+This flow ensures **data consistency, traceability, and readiness** for reporting, while clearly separating **raw ingestion**, **staging**, and **final reporting layers**.
+""")
+
     st.image("etl_zoho.png", use_container_width=True)
 
 elif section == "SQL Script":
