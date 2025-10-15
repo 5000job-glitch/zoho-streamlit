@@ -1,26 +1,64 @@
-# Byte-compiled / optimized / DLL files
+# -----------------------------
+# Python
+# -----------------------------
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyo
+*.pyd
 
-# Virtual environment
+# -----------------------------
+# Virtual Environment
+# -----------------------------
 venv/
 env/
 .venv/
 
+# -----------------------------
 # Logs
+# -----------------------------
 *.log
 
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints/
-
+# -----------------------------
 # OS files
+# -----------------------------
 .DS_Store
 Thumbs.db
 
-# Excel / output files (optional)
+# -----------------------------
+# IDE / Editor
+# -----------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# -----------------------------
+# Jupyter
+# -----------------------------
+.ipynb_checkpoints/
+
+# -----------------------------
+# Data / Output Files
+# -----------------------------
+*.csv
 *.xlsx
 *.xls
+*.json
 
-# Ignore other sensitive configs
+# -----------------------------
+# Config / Secrets
+# -----------------------------
 *.env
+config.py
+
+# -----------------------------
+# Streamlit
+# -----------------------------
+.streamlit/
+
+# -----------------------------
+# Misc
+# -----------------------------
+*.tmp
+*.bak
