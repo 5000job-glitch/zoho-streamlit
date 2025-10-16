@@ -75,8 +75,6 @@ if section == "Introduction":
     - **Final Report** → Visualization of candidate insights  
     - **Confluence  Wiki** → Documentation snapshot  
 
-    ---
-    Select a section from the sidebar to explore each component of the project.
     """)
 
     # st.image("overview.png", caption="High-level Data Flow Overview", use_container_width=True)
