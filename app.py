@@ -42,7 +42,7 @@ with st.sidebar:
     st.markdown("<h3 style='text-align:left; margin-top:10px;'>Project Sections</h3>", unsafe_allow_html=True)
     section = st.radio(
         "",
-        ["Introduction", "Source Code", "ETL Pipeline", "SQL Script", "Final Report", "Azure Wiki"],
+        ["Introduction", "Source Code", "ETL Pipeline", "SQL Script", "Final Report", "Confluence  Wiki"],
         label_visibility="collapsed"
     )
 
@@ -59,7 +59,7 @@ if section == "Introduction":
     - Build an **ETL pipeline** using **WhereScape** and **Azure Data Factory (ADF)**.
     - Generate **SQL transformations** to shape data for analytics.
     - Produce a **final Power BI report** for business stakeholders.
-    - Document all processes in **Azure DevOps Wiki** for transparency and traceability.
+    - Document all processes in **Confluence DevOps Wiki** for transparency and traceability.
 
     ### 🛠 Tech Stack
     - **Python**: Data extraction from Zoho API (`zoho.py`)
@@ -73,7 +73,7 @@ if section == "Introduction":
     - **ETL Pipeline** → Data ingestion & transformation workflow  
     - **SQL Script** → SQL transformations for analytics  
     - **Final Report** → Visualization of candidate insights  
-    - **Azure Wiki** → Documentation snapshot  
+    - **Confluence  Wiki** → Documentation snapshot  
 
     ---
     Select a section from the sidebar to explore each component of the project.
@@ -116,10 +116,10 @@ elif section == "Final Report":
     st.write("Screenshot of the final report showing **metrics for talent acquisition**.")
     st.image("report.png", use_container_width=True)
 
-elif section == "Azure Wiki":
-    st.header("📚 Azure Wiki Documentation")
+elif section == "Confluence  Wiki":
+    st.header("📚 Confluence  Wiki Documentation")
     st.write("Preview of **team documentation** for transparency, ownership, and traceability.")
-    st.image("wiki_doc.png", caption="Sample Azure Wiki Page", use_container_width=True)
+    st.image("wiki_doc.png", caption="Sample Confluence  Wiki Page", use_container_width=True)
 
 # --- Footer ---
 st.markdown("---")
