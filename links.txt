@@ -1,6 +1,6 @@
 streamline url
 
-https://5000job-glitch-zoho-streamlit-app-3chqj1.streamlit.app/
+5000job-glitch-zoho-streamlit-app-3chqj1.streamlit.app
 
 git add .
 git commit -m "Describe what you changed"
