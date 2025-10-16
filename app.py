@@ -1,34 +1,30 @@
 import streamlit as st
 from PIL import Image
 
-# Page configuration
+# --- Page configuration ---
 st.set_page_config(
     page_title="Zoho Data Project",
     layout="wide"
 )
 
-# Custom CSS for styling
+# --- Custom CSS ---
 st.markdown("""
     <style>
-    /* Sidebar background & padding */
     .sidebar .sidebar-content {
         background-color: #f0f2f6;
         padding: 20px;
     }
 
-    /* Sidebar title */
     .sidebar h3 {
         color: #2c3e50;
         font-weight: 700;
         font-size: 20px;
     }
 
-    /* Page headers */
     h1, h2, h3 {
         color: #1f4068;
     }
 
-    /* Code box styling */
     .stCodeBlock {
         background-color: #f7f7f7;
         border-left: 4px solid #1f4068;
@@ -46,12 +42,46 @@ with st.sidebar:
     st.markdown("<h3 style='text-align:left; margin-top:10px;'>Project Sections</h3>", unsafe_allow_html=True)
     section = st.radio(
         "",
-        ["Source Code", "ETL Pipeline", "SQL Script", "Final Report", "Azure Wiki"],
+        ["Introduction", "Source Code", "ETL Pipeline", "SQL Script", "Final Report", "Azure Wiki"],
         label_visibility="collapsed"
     )
 
 # --- Pages ---
-if section == "Source Code":
+if section == "Introduction":
+    st.title("📘 Zoho Data Integration Project")
+    st.write("""
+    Welcome to the **Zoho Data Project Showcase** — a data engineering and analytics initiative that demonstrates 
+    how raw data from **Zoho Recruit** can be extracted, transformed, and prepared for reporting using enterprise tools.
+
+    ### 🧭 Project Overview
+    The goal of this project is to:
+    - **Integrate Zoho Recruit data** into an enterprise data warehouse.
+    - Build an **ETL pipeline** using **WhereScape** and **Azure Data Factory (ADF)**.
+    - Generate **SQL transformations** to shape data for analytics.
+    - Produce a **final Power BI report** for business stakeholders.
+    - Document all processes in **Azure DevOps Wiki** for transparency and traceability.
+
+    ### 🛠 Tech Stack
+    - **Python**: Data extraction from Zoho API (`zoho.py`)
+    - **WhereScape / Azure Data Factory**: ETL orchestration
+    - **SQL Server**: Data modeling and transformation
+    - **Power BI**: Reporting & visualization
+    - **Azure DevOps Wiki**: Team documentation
+
+    ### 📁 Project Structure
+    - **Source Code** → Python script to pull data from Zoho Recruit API  
+    - **ETL Pipeline** → Data ingestion & transformation workflow  
+    - **SQL Script** → SQL transformations for analytics  
+    - **Final Report** → Visualization of candidate insights  
+    - **Azure Wiki** → Documentation snapshot  
+
+    ---
+    Select a section from the sidebar to explore each component of the project.
+    """)
+
+    st.image("overview.png", caption="High-level Data Flow Overview", use_container_width=True)
+
+elif section == "Source Code":
     st.header("🖥 Source Python Code: zoho.py")
     st.write("This script demonstrates **data extraction logic** from Zoho Recruit API. Credentials are removed for privacy.")
     with open("zoho.py", "r") as f:
@@ -73,7 +103,6 @@ It shows how raw API data is transformed and prepared for reporting.
 
 This flow ensures **data consistency, traceability, and readiness** for reporting, while clearly separating **raw ingestion**, **staging**, and **final reporting layers**.
 """)
-
     st.image("etl_zoho.png", use_container_width=True)
 
 elif section == "SQL Script":
@@ -92,6 +121,6 @@ elif section == "Azure Wiki":
     st.write("Preview of **team documentation** for transparency, ownership, and traceability.")
     st.image("wiki_doc.png", caption="Sample Azure Wiki Page", use_container_width=True)
 
-# Footer
+# --- Footer ---
 st.markdown("---")
 st.markdown("<p style='text-align:center; color:gray;'>Project showcase created with Streamlit — all code and data anonymized.</p>", unsafe_allow_html=True)
