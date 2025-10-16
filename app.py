@@ -79,7 +79,7 @@ if section == "Introduction":
     Select a section from the sidebar to explore each component of the project.
     """)
 
-    st.image("overview.png", caption="High-level Data Flow Overview", use_container_width=True)
+    # st.image("overview.png", caption="High-level Data Flow Overview", use_container_width=True)
 
 elif section == "Source Code":
     st.header("🖥 Source Python Code: zoho.py")
